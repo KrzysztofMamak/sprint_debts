@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sprint_debts/app_config.dart';
-import 'package:sprint_debts/injection.dart';
+import 'package:sprint_debts/injection/injection.dart';
 
 @module
 abstract class DioModule {

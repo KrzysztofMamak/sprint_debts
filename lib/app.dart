@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sprint_debts/app_router.dart';
-import 'package:sprint_debts/injection.dart';
+import 'package:sprint_debts/injection/injection.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
