@@ -21,9 +21,9 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    HomeRoute.name: (routeData) {
+    DebtsOverviewRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
-          routeData: routeData, child: const HomePage());
+          routeData: routeData, child: const DebtsOverviewPage());
     },
     DebtDetailsRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
@@ -41,7 +41,7 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   List<RouteConfig> get routes => [
-        RouteConfig(HomeRoute.name, path: '/', guards: [authGuard]),
+        RouteConfig(DebtsOverviewRoute.name, path: '/', guards: [authGuard]),
         RouteConfig(DebtDetailsRoute.name,
             path: '/debt-details-page', guards: [authGuard]),
         RouteConfig(SignupRoute.name, path: '/signup-page'),
@@ -50,11 +50,11 @@ class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [HomePage]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/');
+/// [DebtsOverviewPage]
+class DebtsOverviewRoute extends PageRouteInfo<void> {
+  const DebtsOverviewRoute() : super(DebtsOverviewRoute.name, path: '/');
 
-  static const String name = 'HomeRoute';
+  static const String name = 'DebtsOverviewRoute';
 }
 
 /// generated route for

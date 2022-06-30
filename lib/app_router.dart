@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sprint_debts/auth_guard.dart';
 import 'package:sprint_debts/debt_details_page.dart';
-import 'package:sprint_debts/home_page.dart';
+import 'package:sprint_debts/debts_overview_page.dart';
 import 'package:sprint_debts/sign_in_page.dart';
 import 'package:sprint_debts/signup_page.dart';
 
@@ -13,7 +13,7 @@ part 'app_router.gr.dart';
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute(
-      page: HomePage,
+      page: DebtsOverviewPage,
       initial: true,
       guards: [AuthGuard],
     ),
