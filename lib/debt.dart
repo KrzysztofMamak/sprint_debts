@@ -1,8 +1,9 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart' show immutable;
 import 'package:sprint_debts/debt_status.dart';
 
 @immutable
-class Debt {
+class Debt extends Equatable {
   const Debt({
     required this.createdAt,
     required this.lentAt,
@@ -30,4 +31,15 @@ class Debt {
     }
     return DebtStatus.lent;
   }
+
+  @override
+  List<Object?> get props => [
+        createdAt,
+        lentAt,
+        debtorUuid,
+        lenderUuid,
+        amountPLN,
+        paidAt,
+        receivedAt,
+      ];
 }
