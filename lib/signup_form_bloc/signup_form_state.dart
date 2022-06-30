@@ -3,8 +3,8 @@ part of 'signup_form_bloc.dart';
 @freezed
 abstract class SignupFormState with _$SignupFormState {
   const factory SignupFormState({
-    required String emailAddress,
-    required String password,
+    required EmailAddress emailAddress,
+    required Password password,
     required String repeatedPassword,
     required bool showErrorMessages,
     required bool isSubmitting,
@@ -12,8 +12,8 @@ abstract class SignupFormState with _$SignupFormState {
   }) = _SignupFormState;
 
   factory SignupFormState.initial() => SignupFormState(
-        emailAddress: '',
-        password: '',
+        emailAddress: EmailAddress(''),
+        password: Password(''),
         repeatedPassword: '',
         showErrorMessages: false,
         isSubmitting: false,

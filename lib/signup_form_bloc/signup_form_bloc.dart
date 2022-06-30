@@ -3,9 +3,9 @@ import 'package:sprint_debts/auth_failure.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:sprint_debts/i_auth_repository.dart';
-import 'package:sprint_debts/sign_in_dto.dart';
-import 'package:sprint_debts/util/validations/validations.dart';
+import 'package:sprint_debts/email_address.dart';
+import 'package:sprint_debts/i_auth_facade.dart';
+import 'package:sprint_debts/password.dart';
 
 part 'signup_form_event.dart';
 
@@ -15,11 +15,11 @@ part 'signup_form_bloc.freezed.dart';
 
 @injectable
 class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
-  final IAuthRepository _authRepository;
+  final IAuthFacade _authFacade;
 
-  SignupFormBloc(this._authRepository) : super(SignupFormState.initial()) {
-    on<EmailChanged>((event, emit) {
-      emit(state.copyWith(emailAddress: event.email));
+  SignupFormBloc(this._authFacade) : super(SignupFormState.initial()) {
+    on<EmailAddressChanged>((event, emit) {
+      emit(state.copyWith(emailAddress: event.emailAddress));
     });
 
     on<PasswordChanged>((event, emit) {
@@ -31,15 +31,12 @@ class SignupFormBloc extends Bloc<SignupFormEvent, SignupFormState> {
     });
 
     on<SignupPressed>((event, emit) async {
-      if (state.password == state.repeatedPassword &&
-          Validations.validateEmailAddress(state.emailAddress)) {
+      if (true) {
         emit(state.copyWith(isSubmitting: true));
 
-        final signupResult = await _authRepository.signIn(
-          SignInDto(
-            emailAddress: state.emailAddress,
-            password: state.password,
-          ),
+        final signupResult = await _authFacade.signIn(
+          emailAddress: state.emailAddress,
+          password: state.password,
         );
 
         emit(
