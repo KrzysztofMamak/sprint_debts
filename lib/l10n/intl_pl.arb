@@ -8,5 +8,7 @@
     "placeholders": {
       "minLength": {}
     }
-  }
+  },
+  "debt": "Dług",
+  "debts": "Długi"
 }
