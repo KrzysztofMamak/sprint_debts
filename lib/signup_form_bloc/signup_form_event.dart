@@ -9,7 +9,7 @@ abstract class SignupFormEvent with _$SignupFormEvent {
       PasswordChanged;
 
   const factory SignupFormEvent.repeatedPasswordChanged(
-      String repeatedPassword) = RepeatedPasswordChanged;
+      Password repeatedPassword) = RepeatedPasswordChanged;
 
-  const factory SignupFormEvent.signIndPressed() = SignupPressed;
+  const factory SignupFormEvent.signupPressed() = SignupPressed;
 }

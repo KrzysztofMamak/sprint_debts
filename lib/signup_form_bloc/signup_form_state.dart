@@ -5,7 +5,7 @@ abstract class SignupFormState with _$SignupFormState {
   const factory SignupFormState({
     required EmailAddress emailAddress,
     required Password password,
-    required String repeatedPassword,
+    required Password repeatedPassword,
     required bool showErrorMessages,
     required bool isSubmitting,
     required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
@@ -14,7 +14,7 @@ abstract class SignupFormState with _$SignupFormState {
   factory SignupFormState.initial() => SignupFormState(
         emailAddress: EmailAddress(''),
         password: Password(''),
-        repeatedPassword: '',
+        repeatedPassword: Password(''),
         showErrorMessages: false,
         isSubmitting: false,
         authFailureOrSuccessOption: none(),
