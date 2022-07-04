@@ -21,7 +21,7 @@ import '../local_auth_repository.dart' as _i12;
 import '../remote_auth_repository.dart' as _i7;
 import '../sign_in_form_bloc/sign_in_form_bloc.dart' as _i15;
 import '../signup_form_bloc/signup_form_bloc.dart' as _i16;
-import 'logger_module.dart' as _i18;
+import 'module/logger_module.dart' as _i18;
 import 'module/dio_module.dart' as _i17;
 import 'module/shared_preferences_module.dart'
     as _i19; // ignore_for_file: unnecessary_lambdas
