@@ -5,6 +5,6 @@ import 'package:sprint_debts/injection/injection.config.dart';
 final GetIt getIt = GetIt.instance;
 
 @injectableInit
-void configureInjection() {
-  $initGetIt(getIt);
+Future<void> configureInjection() async {
+  await $initGetIt(getIt);
 }

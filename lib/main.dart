@@ -6,6 +6,6 @@ import 'package:sprint_debts/injection/injection.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppConfigManager.configure();
-  configureInjection();
+  await configureInjection();
   runApp(const App());
 }
