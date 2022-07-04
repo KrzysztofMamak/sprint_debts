@@ -10,26 +10,29 @@ import 'package:sprint_debts/signup_page.dart';
 part 'app_router.gr.dart';
 
 @MaterialAutoRouter(
-  replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(
+    MaterialRoute(
+      path: '/debts-overview',
       page: DebtsOverviewPage,
       initial: true,
       guards: [AuthGuard],
     ),
-    AutoRoute(
+    MaterialRoute(
+      path: '/debt-details',
       page: DebtDetailsPage,
       guards: [AuthGuard],
     ),
-    AutoRoute(
+    MaterialRoute(
+      path: '/signup',
       page: SignupPage,
     ),
-    AutoRoute(
+    MaterialRoute(
+      path: 'sign-in',
       page: SignInPage,
     ),
   ],
 )
-@lazySingleton
+@injectable
 class AppRouter extends _$AppRouter {
   AppRouter({
     required super.authGuard,

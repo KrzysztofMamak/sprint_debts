@@ -21,19 +21,19 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    DebtsOverviewRoute.name: (routeData) {
+    DebtsOverviewPageRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const DebtsOverviewPage());
     },
-    DebtDetailsRoute.name: (routeData) {
+    DebtDetailsPageRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const DebtDetailsPage());
     },
-    SignupRoute.name: (routeData) {
+    SignupPageRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const SignupPage());
     },
-    SignInRoute.name: (routeData) {
+    SignInPageRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
           routeData: routeData, child: const SignInPage());
     }
@@ -41,43 +41,47 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   List<RouteConfig> get routes => [
-        RouteConfig(DebtsOverviewRoute.name, path: '/', guards: [authGuard]),
-        RouteConfig(DebtDetailsRoute.name,
-            path: '/debt-details-page', guards: [authGuard]),
-        RouteConfig(SignupRoute.name, path: '/signup-page'),
-        RouteConfig(SignInRoute.name, path: '/sign-in-page')
+        RouteConfig('/#redirect',
+            path: '/', redirectTo: '/debts-overview', fullMatch: true),
+        RouteConfig(DebtsOverviewPageRoute.name,
+            path: '/debts-overview', guards: [authGuard]),
+        RouteConfig(DebtDetailsPageRoute.name,
+            path: '/debt-details', guards: [authGuard]),
+        RouteConfig(SignupPageRoute.name, path: '/signup'),
+        RouteConfig(SignInPageRoute.name, path: 'sign-in')
       ];
 }
 
 /// generated route for
 /// [DebtsOverviewPage]
-class DebtsOverviewRoute extends PageRouteInfo<void> {
-  const DebtsOverviewRoute() : super(DebtsOverviewRoute.name, path: '/');
+class DebtsOverviewPageRoute extends PageRouteInfo<void> {
+  const DebtsOverviewPageRoute()
+      : super(DebtsOverviewPageRoute.name, path: '/debts-overview');
 
-  static const String name = 'DebtsOverviewRoute';
+  static const String name = 'DebtsOverviewPageRoute';
 }
 
 /// generated route for
 /// [DebtDetailsPage]
-class DebtDetailsRoute extends PageRouteInfo<void> {
-  const DebtDetailsRoute()
-      : super(DebtDetailsRoute.name, path: '/debt-details-page');
+class DebtDetailsPageRoute extends PageRouteInfo<void> {
+  const DebtDetailsPageRoute()
+      : super(DebtDetailsPageRoute.name, path: '/debt-details');
 
-  static const String name = 'DebtDetailsRoute';
+  static const String name = 'DebtDetailsPageRoute';
 }
 
 /// generated route for
 /// [SignupPage]
-class SignupRoute extends PageRouteInfo<void> {
-  const SignupRoute() : super(SignupRoute.name, path: '/signup-page');
+class SignupPageRoute extends PageRouteInfo<void> {
+  const SignupPageRoute() : super(SignupPageRoute.name, path: '/signup');
 
-  static const String name = 'SignupRoute';
+  static const String name = 'SignupPageRoute';
 }
 
 /// generated route for
 /// [SignInPage]
-class SignInRoute extends PageRouteInfo<void> {
-  const SignInRoute() : super(SignInRoute.name, path: '/sign-in-page');
+class SignInPageRoute extends PageRouteInfo<void> {
+  const SignInPageRoute() : super(SignInPageRoute.name, path: 'sign-in');
 
-  static const String name = 'SignInRoute';
+  static const String name = 'SignInPageRoute';
 }
