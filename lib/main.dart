@@ -7,5 +7,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppConfigManager.configure();
   await configureInjection();
-  runApp(const App());
+  runApp(App());
 }

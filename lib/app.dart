@@ -3,18 +3,19 @@ import 'package:sprint_debts/app_router.dart';
 import 'package:sprint_debts/injection/injection.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  App({Key? key}) : super(key: key);
+
+  final _router = getIt.get<AppRouter>();
 
   @override
   Widget build(BuildContext context) {
-    final router = getIt.get<AppRouter>();
     return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routerDelegate: router.delegate(),
-      routeInformationParser: router.defaultRouteParser(),
+      routerDelegate: _router.delegate(),
+      routeInformationParser: _router.defaultRouteParser(),
     );
   }
 }
