@@ -15,7 +15,7 @@ abstract class AppConfigManager {
 
   static Future<AppConfig> _loadAppConfig(String env) async {
     final json = await rootBundle.loadString(
-      'config/${env.toLowerCase()}.json',
+      'assets/config/${env.toLowerCase()}.json',
     );
     return AppConfig.fromJson(jsonDecode(json));
   }
