@@ -5,6 +5,11 @@ class SignupPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Signup'),
+      ),
+      body: Container(color: Colors.red),
+    );
   }
 }
