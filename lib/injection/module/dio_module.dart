@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sprint_debts/app_config.dart';
 import 'package:sprint_debts/injection/injection.dart';
+import 'package:sprint_debts/logging_interceptor.dart';
 
 @module
 abstract class DioModule {
@@ -14,7 +15,7 @@ abstract class DioModule {
       ),
     )..interceptors.addAll(
         [
-          // TODO -> add interceptors
+          if (!appConfig.isProd) LoggingInterceptor(),
         ],
       );
   }
