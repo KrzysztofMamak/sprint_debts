@@ -10,17 +10,17 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:logger/logger.dart' as _i8;
 import 'package:shared_preferences/shared_preferences.dart' as _i9;
 
-import '../app_router.dart' as _i10;
-import '../auth_facade.dart' as _i14;
+import '../application/auth/sign_in_form/sign_in_form_bloc.dart' as _i15;
+import '../application/auth/signup_form/signup_form_bloc.dart' as _i16;
+import '../application/debts/debts_overview/debts_overview_bloc.dart' as _i4;
 import '../auth_guard.dart' as _i3;
-import '../debts_overview_bloc/debts_overview_bloc.dart' as _i4;
-import '../i_auth_facade.dart' as _i13;
-import '../i_local_auth_repository.dart' as _i11;
-import '../i_remote_auth_repository.dart' as _i6;
-import '../local_auth_repository.dart' as _i12;
-import '../remote_auth_repository.dart' as _i7;
-import '../sign_in_form_bloc/sign_in_form_bloc.dart' as _i15;
-import '../signup_form_bloc/signup_form_bloc.dart' as _i16;
+import '../domain/auth/i_auth_facade.dart' as _i13;
+import '../domain/auth/i_local_auth_repository.dart' as _i11;
+import '../domain/auth/i_remote_auth_repository.dart' as _i6;
+import '../infrastructure/auth/auth_facade.dart' as _i14;
+import '../infrastructure/auth/local_auth_repository.dart' as _i12;
+import '../infrastructure/auth/remote_auth_repository.dart' as _i7;
+import '../presentation/router/app_router.dart' as _i10;
 import 'module/dio_module.dart' as _i17;
 import 'module/logger_module.dart' as _i18;
 import 'module/shared_preferences_module.dart'

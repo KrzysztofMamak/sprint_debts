@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sprint_debts/i_local_auth_repository.dart';
+import 'package:sprint_debts/domain/auth/i_local_auth_repository.dart';
 import 'package:sprint_debts/sp_keys.dart';
 
 @Injectable(as: ILocalAuthRepository)

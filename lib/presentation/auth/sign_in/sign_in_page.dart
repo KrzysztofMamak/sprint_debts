@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sprint_debts/app_router.dart';
-import 'package:sprint_debts/email_address.dart';
+import 'package:sprint_debts/presentation/router/app_router.dart';
+import 'package:sprint_debts/domain/auth/email_address.dart';
 import 'package:sprint_debts/injection/injection.dart';
-import 'package:sprint_debts/password.dart';
-import 'package:sprint_debts/sign_in_form_bloc/sign_in_form_bloc.dart';
+import 'package:sprint_debts/domain/auth/password.dart';
+import 'package:sprint_debts/application/auth/sign_in_form/sign_in_form_bloc.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);

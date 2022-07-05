@@ -1,4 +1,4 @@
-import 'package:sprint_debts/value_failure.dart';
+import 'package:sprint_debts/domain/core/value_failure.dart';
 
 class UnexpectedValueError extends Error {
   final ValueFailure valueFailure;

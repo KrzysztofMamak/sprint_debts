@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:injectable/injectable.dart';
-import 'package:sprint_debts/app_router.dart';
+import 'package:sprint_debts/presentation/router/app_router.dart';
 
 @injectable
 class AuthGuard extends AutoRouteGuard {

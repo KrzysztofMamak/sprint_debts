@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:sprint_debts/value_failure.dart';
+import 'package:sprint_debts/domain/core/value_failure.dart';
 
 Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
   if (input.isNotEmpty) {

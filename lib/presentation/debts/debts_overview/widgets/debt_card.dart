@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sprint_debts/debt.dart';
+import 'package:sprint_debts/domain/debt/debt.dart';
 
 class DebtCard extends StatelessWidget {
   const DebtCard({

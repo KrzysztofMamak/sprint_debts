@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sprint_debts/auth_api.dart';
-import 'package:sprint_debts/auth_failure.dart';
-import 'package:sprint_debts/i_remote_auth_repository.dart';
-import 'package:sprint_debts/sign_in_dto.dart';
-import 'package:sprint_debts/signup_dto.dart';
+import 'package:sprint_debts/domain/auth/auth_failure.dart';
+import 'package:sprint_debts/domain/auth/i_remote_auth_repository.dart';
+import 'package:sprint_debts/domain/auth/sign_in_dto.dart';
+import 'package:sprint_debts/domain/auth/signup_dto.dart';
 
 @LazySingleton(as: IRemoteAuthRepository)
 class RemoteAuthRepository implements IRemoteAuthRepository {

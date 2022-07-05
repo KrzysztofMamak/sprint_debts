@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sprint_debts/debts_overview_bloc/debts_overview_bloc.dart';
-import 'package:sprint_debts/debt_card.dart';
-import 'package:sprint_debts/debts_overview_error_placeholder.dart';
+import 'package:sprint_debts/application/debts/debts_overview/debts_overview_bloc.dart';
+import 'package:sprint_debts/presentation/debts/debts_overview/widgets/debt_card.dart';
+import 'package:sprint_debts/presentation/debts/debts_overview/widgets/debts_overview_error_placeholder.dart';
 
 class HomePageBody extends StatelessWidget {
   const HomePageBody({Key? key}) : super(key: key);

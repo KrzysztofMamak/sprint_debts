@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:sprint_debts/unexpected_value_error.dart';
-import 'package:sprint_debts/value_failure.dart';
+import 'package:sprint_debts/domain/core/unexpected_value_error.dart';
+import 'package:sprint_debts/domain/core/value_failure.dart';
 
 @immutable
 abstract class ValueObject<T> {

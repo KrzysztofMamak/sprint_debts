@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:sprint_debts/debt_status.dart';
+import 'package:sprint_debts/domain/debt/debt_status.dart';
 
 @immutable
 class Debt extends Equatable {

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:sprint_debts/sign_in_dto.dart';
-import 'package:sprint_debts/signup_dto.dart';
+import 'package:sprint_debts/domain/auth/sign_in_dto.dart';
+import 'package:sprint_debts/domain/auth/signup_dto.dart';
 
 part 'auth_api.g.dart';
 

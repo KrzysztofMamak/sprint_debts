@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:sprint_debts/auth_failure.dart';
-import 'package:sprint_debts/email_address.dart';
-import 'package:sprint_debts/i_auth_facade.dart';
-import 'package:sprint_debts/i_local_auth_repository.dart';
-import 'package:sprint_debts/i_remote_auth_repository.dart';
-import 'package:sprint_debts/password.dart';
+import 'package:sprint_debts/domain/auth/auth_failure.dart';
+import 'package:sprint_debts/domain/auth/email_address.dart';
+import 'package:sprint_debts/domain/auth/i_auth_facade.dart';
+import 'package:sprint_debts/domain/auth/i_local_auth_repository.dart';
+import 'package:sprint_debts/domain/auth/i_remote_auth_repository.dart';
+import 'package:sprint_debts/domain/auth/password.dart';
 
 @Injectable(as: IAuthFacade)
 class AuthFacade implements IAuthFacade {

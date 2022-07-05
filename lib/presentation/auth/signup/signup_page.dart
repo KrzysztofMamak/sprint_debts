@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sprint_debts/app_router.dart';
-import 'package:sprint_debts/email_address.dart';
+import 'package:sprint_debts/presentation/router/app_router.dart';
+import 'package:sprint_debts/domain/auth/email_address.dart';
 import 'package:sprint_debts/injection/injection.dart';
-import 'package:sprint_debts/password.dart';
-import 'package:sprint_debts/signup_form_bloc/signup_form_bloc.dart';
+import 'package:sprint_debts/domain/auth/password.dart';
+import 'package:sprint_debts/application/auth/signup_form/signup_form_bloc.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -131,7 +131,7 @@ class SignupPage extends StatelessWidget {
                   ),
                   if (state.isSubmitting) ...[
                     const SizedBox(height: 8),
-                    const LinearProgressIndicator(value: null),
+                    const LinearProgressIndicator(),
                   ]
                 ],
               ),

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:sprint_debts/auth_failure.dart';
-import 'package:sprint_debts/email_address.dart';
-import 'package:sprint_debts/password.dart';
+import 'package:sprint_debts/domain/auth/auth_failure.dart';
+import 'package:sprint_debts/domain/auth/email_address.dart';
+import 'package:sprint_debts/domain/auth/password.dart';
 
 abstract class IAuthFacade {
   Either<AuthFailure, Unit> auth();

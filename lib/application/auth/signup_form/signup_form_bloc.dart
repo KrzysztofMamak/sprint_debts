@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:sprint_debts/auth_failure.dart';
+import 'package:sprint_debts/domain/auth/auth_failure.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:sprint_debts/email_address.dart';
-import 'package:sprint_debts/i_auth_facade.dart';
-import 'package:sprint_debts/password.dart';
+import 'package:sprint_debts/domain/auth/email_address.dart';
+import 'package:sprint_debts/domain/auth/i_auth_facade.dart';
+import 'package:sprint_debts/domain/auth/password.dart';
 
 part 'signup_form_event.dart';
 
