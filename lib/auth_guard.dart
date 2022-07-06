@@ -7,8 +7,10 @@ class AuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     // TODO -> implement
-    if (true) {
+    if (false) {
       router.replace(const SignInPageRoute());
+    } else {
+      resolver.next();
     }
   }
 }
