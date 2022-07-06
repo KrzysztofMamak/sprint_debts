@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sprint_debts/application/debts/debts_overview/debts_overview_bloc.dart';
+import 'package:sprint_debts/injection/injection.dart';
+import 'package:sprint_debts/presentation/debts/debts_overview/widgets/debts_overview_page_body.dart';
 import 'package:sprint_debts/util/ext/build_context_ext.dart';
 
 class DebtsOverviewPage extends StatelessWidget {
@@ -6,16 +10,19 @@ class DebtsOverviewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
-    // return BlocBuilder<>(
-    //   builder: (context) {
-    //     return Scaffold(
-    //       appBar: AppBar(
-    //         title: Text(context.loc.debts),
-    //       ),
-    //       body: HomePageBody(),
-    //     );
-    //   }
-    // );
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<DebtsOverviewBloc>(
+          create: (context) => getIt<DebtsOverviewBloc>()
+            ..add(const DebtsOverviewEvent.fetchAll()),
+        ),
+      ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Debts'),
+        ),
+        body: const DebtsOverviewPageBody(),
+      ),
+    );
   }
 }

@@ -4,8 +4,8 @@ import 'package:sprint_debts/application/debts/debts_overview/debts_overview_blo
 import 'package:sprint_debts/presentation/debts/debts_overview/widgets/debt_card.dart';
 import 'package:sprint_debts/presentation/debts/debts_overview/widgets/debts_overview_error_placeholder.dart';
 
-class HomePageBody extends StatelessWidget {
-  const HomePageBody({Key? key}) : super(key: key);
+class DebtsOverviewPageBody extends StatelessWidget {
+  const DebtsOverviewPageBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

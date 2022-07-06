@@ -18,38 +18,47 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$DebtsOverviewEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() event,
-    required TResult Function() debtsReceived,
+    required TResult Function() fetchAll,
+    required TResult Function(DebtStatus debtStatus) filter,
+    required TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)
+        debtsReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Event value) event,
+    required TResult Function(FetchAll value) fetchAll,
+    required TResult Function(Filter value) filter,
     required TResult Function(_DebtsReceived value) debtsReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
     required TResult orElse(),
   }) =>
@@ -74,35 +83,37 @@ class _$DebtsOverviewEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$EventCopyWith<$Res> {
-  factory _$$EventCopyWith(_$Event value, $Res Function(_$Event) then) =
-      __$$EventCopyWithImpl<$Res>;
+abstract class _$$FetchAllCopyWith<$Res> {
+  factory _$$FetchAllCopyWith(
+          _$FetchAll value, $Res Function(_$FetchAll) then) =
+      __$$FetchAllCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$EventCopyWithImpl<$Res> extends _$DebtsOverviewEventCopyWithImpl<$Res>
-    implements _$$EventCopyWith<$Res> {
-  __$$EventCopyWithImpl(_$Event _value, $Res Function(_$Event) _then)
-      : super(_value, (v) => _then(v as _$Event));
+class __$$FetchAllCopyWithImpl<$Res>
+    extends _$DebtsOverviewEventCopyWithImpl<$Res>
+    implements _$$FetchAllCopyWith<$Res> {
+  __$$FetchAllCopyWithImpl(_$FetchAll _value, $Res Function(_$FetchAll) _then)
+      : super(_value, (v) => _then(v as _$FetchAll));
 
   @override
-  _$Event get _value => super._value as _$Event;
+  _$FetchAll get _value => super._value as _$FetchAll;
 }
 
 /// @nodoc
 
-class _$Event implements Event {
-  const _$Event();
+class _$FetchAll implements FetchAll {
+  const _$FetchAll();
 
   @override
   String toString() {
-    return 'DebtsOverviewEvent.event()';
+    return 'DebtsOverviewEvent.fetchAll()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Event);
+        (other.runtimeType == runtimeType && other is _$FetchAll);
   }
 
   @override
@@ -111,30 +122,36 @@ class _$Event implements Event {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() event,
-    required TResult Function() debtsReceived,
+    required TResult Function() fetchAll,
+    required TResult Function(DebtStatus debtStatus) filter,
+    required TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)
+        debtsReceived,
   }) {
-    return event();
+    return fetchAll();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
   }) {
-    return event?.call();
+    return fetchAll?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
     required TResult orElse(),
   }) {
-    if (event != null) {
-      return event();
+    if (fetchAll != null) {
+      return fetchAll();
     }
     return orElse();
   }
@@ -142,37 +159,182 @@ class _$Event implements Event {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Event value) event,
+    required TResult Function(FetchAll value) fetchAll,
+    required TResult Function(Filter value) filter,
     required TResult Function(_DebtsReceived value) debtsReceived,
   }) {
-    return event(this);
+    return fetchAll(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
   }) {
-    return event?.call(this);
+    return fetchAll?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
     required TResult orElse(),
   }) {
-    if (event != null) {
-      return event(this);
+    if (fetchAll != null) {
+      return fetchAll(this);
     }
     return orElse();
   }
 }
 
-abstract class Event implements DebtsOverviewEvent {
-  const factory Event() = _$Event;
+abstract class FetchAll implements DebtsOverviewEvent {
+  const factory FetchAll() = _$FetchAll;
+}
+
+/// @nodoc
+abstract class _$$FilterCopyWith<$Res> {
+  factory _$$FilterCopyWith(_$Filter value, $Res Function(_$Filter) then) =
+      __$$FilterCopyWithImpl<$Res>;
+  $Res call({DebtStatus debtStatus});
+}
+
+/// @nodoc
+class __$$FilterCopyWithImpl<$Res>
+    extends _$DebtsOverviewEventCopyWithImpl<$Res>
+    implements _$$FilterCopyWith<$Res> {
+  __$$FilterCopyWithImpl(_$Filter _value, $Res Function(_$Filter) _then)
+      : super(_value, (v) => _then(v as _$Filter));
+
+  @override
+  _$Filter get _value => super._value as _$Filter;
+
+  @override
+  $Res call({
+    Object? debtStatus = freezed,
+  }) {
+    return _then(_$Filter(
+      debtStatus == freezed
+          ? _value.debtStatus
+          : debtStatus // ignore: cast_nullable_to_non_nullable
+              as DebtStatus,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Filter implements Filter {
+  const _$Filter(this.debtStatus);
+
+  @override
+  final DebtStatus debtStatus;
+
+  @override
+  String toString() {
+    return 'DebtsOverviewEvent.filter(debtStatus: $debtStatus)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Filter &&
+            const DeepCollectionEquality()
+                .equals(other.debtStatus, debtStatus));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(debtStatus));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$FilterCopyWith<_$Filter> get copyWith =>
+      __$$FilterCopyWithImpl<_$Filter>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchAll,
+    required TResult Function(DebtStatus debtStatus) filter,
+    required TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)
+        debtsReceived,
+  }) {
+    return filter(debtStatus);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
+  }) {
+    return filter?.call(debtStatus);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
+    required TResult orElse(),
+  }) {
+    if (filter != null) {
+      return filter(debtStatus);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FetchAll value) fetchAll,
+    required TResult Function(Filter value) filter,
+    required TResult Function(_DebtsReceived value) debtsReceived,
+  }) {
+    return filter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
+    TResult Function(_DebtsReceived value)? debtsReceived,
+  }) {
+    return filter?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
+    TResult Function(_DebtsReceived value)? debtsReceived,
+    required TResult orElse(),
+  }) {
+    if (filter != null) {
+      return filter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Filter implements DebtsOverviewEvent {
+  const factory Filter(final DebtStatus debtStatus) = _$Filter;
+
+  DebtStatus get debtStatus => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$FilterCopyWith<_$Filter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -180,6 +342,7 @@ abstract class _$$_DebtsReceivedCopyWith<$Res> {
   factory _$$_DebtsReceivedCopyWith(
           _$_DebtsReceived value, $Res Function(_$_DebtsReceived) then) =
       __$$_DebtsReceivedCopyWithImpl<$Res>;
+  $Res call({Either<DebtFailure, List<Debt>> failureOrDebts});
 }
 
 /// @nodoc
@@ -192,54 +355,84 @@ class __$$_DebtsReceivedCopyWithImpl<$Res>
 
   @override
   _$_DebtsReceived get _value => super._value as _$_DebtsReceived;
+
+  @override
+  $Res call({
+    Object? failureOrDebts = freezed,
+  }) {
+    return _then(_$_DebtsReceived(
+      failureOrDebts == freezed
+          ? _value.failureOrDebts
+          : failureOrDebts // ignore: cast_nullable_to_non_nullable
+              as Either<DebtFailure, List<Debt>>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_DebtsReceived implements _DebtsReceived {
-  const _$_DebtsReceived();
+  const _$_DebtsReceived(this.failureOrDebts);
+
+  @override
+  final Either<DebtFailure, List<Debt>> failureOrDebts;
 
   @override
   String toString() {
-    return 'DebtsOverviewEvent.debtsReceived()';
+    return 'DebtsOverviewEvent.debtsReceived(failureOrDebts: $failureOrDebts)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_DebtsReceived);
+        (other.runtimeType == runtimeType &&
+            other is _$_DebtsReceived &&
+            const DeepCollectionEquality()
+                .equals(other.failureOrDebts, failureOrDebts));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failureOrDebts));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_DebtsReceivedCopyWith<_$_DebtsReceived> get copyWith =>
+      __$$_DebtsReceivedCopyWithImpl<_$_DebtsReceived>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() event,
-    required TResult Function() debtsReceived,
+    required TResult Function() fetchAll,
+    required TResult Function(DebtStatus debtStatus) filter,
+    required TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)
+        debtsReceived,
   }) {
-    return debtsReceived();
+    return debtsReceived(failureOrDebts);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
   }) {
-    return debtsReceived?.call();
+    return debtsReceived?.call(failureOrDebts);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? event,
-    TResult Function()? debtsReceived,
+    TResult Function()? fetchAll,
+    TResult Function(DebtStatus debtStatus)? filter,
+    TResult Function(Either<DebtFailure, List<Debt>> failureOrDebts)?
+        debtsReceived,
     required TResult orElse(),
   }) {
     if (debtsReceived != null) {
-      return debtsReceived();
+      return debtsReceived(failureOrDebts);
     }
     return orElse();
   }
@@ -247,7 +440,8 @@ class _$_DebtsReceived implements _DebtsReceived {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Event value) event,
+    required TResult Function(FetchAll value) fetchAll,
+    required TResult Function(Filter value) filter,
     required TResult Function(_DebtsReceived value) debtsReceived,
   }) {
     return debtsReceived(this);
@@ -256,7 +450,8 @@ class _$_DebtsReceived implements _DebtsReceived {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
   }) {
     return debtsReceived?.call(this);
@@ -265,7 +460,8 @@ class _$_DebtsReceived implements _DebtsReceived {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Event value)? event,
+    TResult Function(FetchAll value)? fetchAll,
+    TResult Function(Filter value)? filter,
     TResult Function(_DebtsReceived value)? debtsReceived,
     required TResult orElse(),
   }) {
@@ -277,7 +473,14 @@ class _$_DebtsReceived implements _DebtsReceived {
 }
 
 abstract class _DebtsReceived implements DebtsOverviewEvent {
-  const factory _DebtsReceived() = _$_DebtsReceived;
+  const factory _DebtsReceived(
+      final Either<DebtFailure, List<Debt>> failureOrDebts) = _$_DebtsReceived;
+
+  Either<DebtFailure, List<Debt>> get failureOrDebts =>
+      throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$_DebtsReceivedCopyWith<_$_DebtsReceived> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

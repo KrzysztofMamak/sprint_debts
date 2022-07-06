@@ -1,4 +1,4 @@
-part of '../debts_overview/debts_overview_bloc.dart';
+part of 'debts_overview_bloc.dart';
 
 @freezed
 abstract class DebtsOverviewState with _$DebtsOverviewState {
